@@ -1,6 +1,6 @@
 import { Router, Response, Request, NextFunction } from "express";
 import { Task } from "../db/entities/Task.js";
-import { createTask, deleteTask, getTasks } from "../controllers/task.js";
+import { createTask, deleteTask, editTask, getTasks } from "../controllers/task.js";
 
 
 const router = Router()
@@ -41,6 +41,24 @@ router.delete("/:id", async (req:Request, res:Response, next:NextFunction)=>{
 
         res.json({
             messege:"Task deleted successfully",
+            success: true
+        })
+    } catch (error) {
+        console.log("Error" + error);
+        next(error)
+    }
+})
+
+router.put("/:id", async (req:Request, res:Response, next:NextFunction)=>{
+
+    const id =Number (req.params.id);
+    const payload :Task = req.body;
+
+    try {
+        const task = await editTask(id, payload)
+
+        res.json({
+            messege:"Task edited successfully",
             success: true
         })
     } catch (error) {

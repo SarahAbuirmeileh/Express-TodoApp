@@ -38,4 +38,23 @@ const deleteTask = async (id:number)=>{
     return task.remove()
 }
 
-export {createTask, getTasks, deleteTask}
+const editTask = async (id:number, payload:Task)=>{
+    const task = await Task.findOne({ where:{id:id }})
+
+    if(!task){
+        throw new AppError("Task not found ", 404, true)
+    }
+
+    if(payload.title){
+        task.title = payload.title
+    }
+
+    if(payload.isDone){
+        task.isDone = payload.isDone
+    }
+
+    return task.save()
+    
+}
+
+export {createTask, getTasks, deleteTask, editTask}
