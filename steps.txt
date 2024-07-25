@@ -9,6 +9,8 @@
 *********************************************************
 8. Create entity
 9. CRUD
+   create controller (simple fun) and call it in the router
+   then use the router in app.ts
    C : Create  -> POST
    R : Read    -> GET
    U : Update  -> PUT
