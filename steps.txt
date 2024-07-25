@@ -1,0 +1,15 @@
+0. npm i -g npm
+1. npx create-express-with-typescript TodoApp
+2. edit the structer of folders
+3. edit ts config file
+4. create simple express app in app.ts file
+5. download typeorm & mysql
+6. set the connnections
+7. set the initialize
+*********************************************************
+8. Create entity
+9. CRUD
+   C : Create  -> POST
+   R : Read    -> GET
+   U : Update  -> PUT
+   D : Delete  -> DELETE
