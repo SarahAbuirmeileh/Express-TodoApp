@@ -1,6 +1,6 @@
-# Express Application using Typescript
+# Express Application using Typescript Tutorial
 
-In this simple tutorial we will take a detailed gide to build robust Express Application using Typescript. The tutorial is divided into sections, each section has some steps.
+In this simple tutorial we will take a detailed guide to build robust Express Application using Typescript. The tutorial is divided into sections, each section has some steps.
 
 ## Section 1 : Install Requirements
 To be able to create this Application you have to install some dependencies, follow these steps :
